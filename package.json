@@ -1,0 +1,7 @@
+{
+  "name": "topcoat-workers-poc",
+  "private": true,
+  "devDependencies": {
+    "wrangler": "4.114.0"
+  }
+}

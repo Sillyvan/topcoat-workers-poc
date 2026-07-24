@@ -11,4 +11,23 @@ crate-type = ["cdylib"]
 http = "1"
 worker = { version = "0.8", features = ["http"] }
 worker-macros = { version = "0.8", features = ["http"] }
-topcoat = { git = "https://github.com/tokio-rs/topcoat", rev = "6bd15a595e0d1cdb4af0b5fbdcd9be5e9873f6c9", default-features = false, features = ["asset", "router", "runtime"] }
+topcoat = { git = "https://github.com/tokio-rs/topcoat", rev = "6bd15a595e0d1cdb4af0b5fbdcd9be5e9873f6c9", default-features = false, features = [
+  "asset",
+  "cookie",
+  "htmx",
+  "icon",
+  "router",
+  "runtime",
+  "font-fontsource",
+  "ui",
+] }
+topcoat-icon-macro = { git = "https://github.com/tokio-rs/topcoat", rev = "6bd15a595e0d1cdb4af0b5fbdcd9be5e9873f6c9", default-features = false, features = [
+  "iconify",
+] }
+serde = { version = "1", features = ["derive"] }
+
+[build-dependencies]
+topcoat = { git = "https://github.com/tokio-rs/topcoat", rev = "6bd15a595e0d1cdb4af0b5fbdcd9be5e9873f6c9", default-features = false, features = [
+  "icon-iconify",
+  "tailwind",
+] }

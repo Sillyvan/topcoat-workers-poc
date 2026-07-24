@@ -1,6 +1,42 @@
 version = 1
 
 [[assets]]
+id = 3607667809313707765
+file = "latin-400-normal-ead637fd0b6b887d.woff2"
+hash = "ead637fd0b6b887d829b3ce3f25fdc242b1de0cfb69c0d97987933675d1315ba"
+content_type = "font/woff2"
+
+[[assets]]
+id = 6509279271266173631
+file = "latin-600-normal-edde7cc4e2719898.woff2"
+hash = "edde7cc4e2719898f981a6d970a756030fff75a8ed36dd6a457a60181b889ebf"
+content_type = "font/woff2"
+
+[[assets]]
+id = 528203678865100214
+file = "latin-700-normal-728e76ff0b762124.woff2"
+hash = "728e76ff0b76212419e83011f5202c2fd1144da9d7915a4fa787561f5a3f334d"
+content_type = "font/woff2"
+
+[[assets]]
+id = 13218889935706749868
+file = "latin-500-normal-6145bf6706dbc1b6.woff2"
+hash = "6145bf6706dbc1b6686f04f871489cf724951f00b752745896ccdcac07639a53"
+content_type = "font/woff2"
+
+[[assets]]
+id = 10537845063891612093
+file = "styles.generated-41a5498049d8ba03.css"
+hash = "41a5498049d8ba036a9d6e2e97c897aeb63f3587f1bffe1bde85f1f00fade77c"
+content_type = "text/css"
+
+[[assets]]
+id = 16871202944815138348
+file = "htmx.min-71ea67185bfa8c98.js"
+hash = "71ea67185bfa8c98c39d31717c6fce5d852370fcdfd129db4543774d3145c0de"
+content_type = "text/javascript"
+
+[[assets]]
 id = 8791894775801211007
 file = "topcoat-dfc8225a7b557f44.js"
 hash = "dfc8225a7b557f44624264adff2e98746714576c0892c388b8bb38294e3233de"

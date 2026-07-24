@@ -1,4 +1,4 @@
-name = "cf-poc"
+name = "topcoat-workers-poc"
 main = "build/index.js"
 compatibility_date = "2026-07-24"
 
