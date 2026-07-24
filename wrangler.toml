@@ -2,5 +2,18 @@ name = "cf-poc"
 main = "build/index.js"
 compatibility_date = "2026-07-24"
 
+[observability]
+enabled = true
+head_sampling_rate = 1
+
+[observability.logs]
+enabled = true
+invocation_logs = true
+head_sampling_rate = 1
+
+[observability.traces]
+enabled = true
+head_sampling_rate = 1
+
 [build]
 command = "cargo install -q \"worker-build@^0.8\" && worker-build --release"

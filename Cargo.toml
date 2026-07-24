@@ -8,9 +8,7 @@ authors = ["silvan <38138071+Sillyvan@users.noreply.github.com>"]
 crate-type = ["cdylib"]
 
 [dependencies]
-worker = { version = "0.8", features = ['http', 'axum'] }
-worker-macros = { version = "0.8", features = ['http'] }
-axum = { version = "0.8", default-features = false, features = ['json'] }
-tower-service = "0.3.3"
-topcoat.workspace = true
-tokio = { workspace = true, features = ["rt-multi-thread", "macros"] }
+http = "1"
+worker = { version = "0.8", features = ["http"] }
+worker-macros = { version = "0.8", features = ["http"] }
+topcoat = { git = "https://github.com/tokio-rs/topcoat", rev = "3042dea0f9243ff1ea0c479a73a0d9da5c48ac3c", default-features = false, features = ["router"] }
