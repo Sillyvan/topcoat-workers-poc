@@ -5,7 +5,8 @@ uses a browser-side signal and a `#[shard]` to filter a hardcoded list on the se
 
 ## Development
 
-Start the local Worker:
+Start the local Worker. Wrangler runs `build.sh`, which bundles Topcoat's browser assets and then
+builds the Rust Worker:
 
 ```sh
 npx wrangler dev
@@ -13,9 +14,8 @@ npx wrangler dev
 
 Then open <http://localhost:8787>.
 
-## Runtime JavaScript
+## Assets
 
-`public/topcoat-runtime.js` is currently copied manually from the same Topcoat commit pinned in
-`Cargo.toml`. Normally Topcoat's asset bundler generates this file and its manifest, but the current
-CLI expects a Cargo executable while workers-rs builds a `cdylib` Wasm artifact. This is a temporary
-POC workaround.
+Topcoat generates its content-hashed browser runtime and manifest in `static/_topcoat/assets`.
+Wrangler serves that directory as static assets, while the manifest is embedded into the Worker so
+`topcoat::runtime::script()` resolves the generated runtime URL without filesystem access.

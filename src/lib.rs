@@ -1,4 +1,5 @@
 use topcoat::{
+    asset::{AssetConfig, Manifest, RouterBuilderAssetExt},
     router::{page, route, Body, Router},
     runtime::{shard, Event, RouterBuilderShardExt},
     view::view,
@@ -7,10 +8,14 @@ use topcoat::{
 use worker::{Context, Env, HttpRequest};
 
 fn router() -> Router {
+    let manifest = Manifest::parse(include_str!("../static/_topcoat/assets/manifest.toml"))
+        .expect("invalid Topcoat asset manifest");
+
     Router::builder()
         .page(home)
         .route(health)
         .shard(search_results)
+        .assets(AssetConfig::hosted_at("/_topcoat/assets", manifest))
         .build()
 }
 
@@ -32,7 +37,7 @@ async fn home() -> TopcoatResult {
                 <meta charset="utf-8">
                 <meta name="viewport" content="width=device-width, initial-scale=1">
                 <title>"Topcoat on Cloudflare"</title>
-                <script type="module" src="/topcoat-runtime.js"></script>
+                topcoat::runtime::script()
             </head>
             <body>
                 <main>

@@ -16,7 +16,8 @@ enabled = true
 head_sampling_rate = 1
 
 [assets]
-directory = "./public"
+directory = "./static"
 
 [build]
-command = "cargo install -q \"worker-build@^0.8\" && worker-build --release"
+command = "bash ./build.sh"
+watch_dir = "./src"
