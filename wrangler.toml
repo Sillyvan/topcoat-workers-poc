@@ -15,5 +15,8 @@ head_sampling_rate = 1
 enabled = true
 head_sampling_rate = 1
 
+[assets]
+directory = "./public"
+
 [build]
 command = "cargo install -q \"worker-build@^0.8\" && worker-build --release"

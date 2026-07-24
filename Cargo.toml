@@ -11,4 +11,4 @@ crate-type = ["cdylib"]
 http = "1"
 worker = { version = "0.8", features = ["http"] }
 worker-macros = { version = "0.8", features = ["http"] }
-topcoat = { git = "https://github.com/tokio-rs/topcoat", rev = "3042dea0f9243ff1ea0c479a73a0d9da5c48ac3c", default-features = false, features = ["router"] }
+topcoat = { git = "https://github.com/tokio-rs/topcoat", rev = "3042dea0f9243ff1ea0c479a73a0d9da5c48ac3c", default-features = false, features = ["asset", "router", "runtime"] }
