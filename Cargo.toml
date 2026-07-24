@@ -1,0 +1,16 @@
+[package]
+name = "cf-poc"
+version = "0.1.0"
+edition = "2021"
+authors = ["silvan <38138071+Sillyvan@users.noreply.github.com>"]
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+worker = { version = "0.8", features = ['http', 'axum'] }
+worker-macros = { version = "0.8", features = ['http'] }
+axum = { version = "0.8", default-features = false, features = ['json'] }
+tower-service = "0.3.3"
+topcoat.workspace = true
+tokio = { workspace = true, features = ["rt-multi-thread", "macros"] }
